@@ -1,0 +1,12 @@
+uuid: 0e0e2944-ab08-4db2-9c96-b538641a0d37
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Bmh5cwX3QGb8Ulg4olteo0UDVHdrOr6NcD3EszbQDpA
+id: node.highlighted_bottom
+label: 'Highlighted Bottom'
+targetEntityType: node
+cache: true
