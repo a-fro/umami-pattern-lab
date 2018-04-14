@@ -1,0 +1,17 @@
+// sass-lint:disable no-vendor-prefixes
+
+html {
+  min-height: 100%;
+  box-sizing: border-box;
+  // Prevent adjustments of font size after orientation changes in IE and iOS.
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+// Use the saner border-box model for all elements.
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

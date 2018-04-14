@@ -1,0 +1,18 @@
+{
+  "name": "emulsify",
+  "description": "Project template for Drupal 8 themes",
+  "version": "1.0.0",
+  "devDependencies": {
+    "emulsify-gulp": "fourkitchens/emulsify-gulp",
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "compass-mixins": "0.12.10",
+    "sass-tools": "^2.1.2"
+  },
+  "scripts": {
+    "start": "gulp clean && gulp compile && gulp theme",
+    "postinstall": "./scripts/pattern_lab.sh && ./scripts/twig_functions.sh"
+  },
+  "precommit.silent": true
+}

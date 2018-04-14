@@ -1,0 +1,52 @@
+name: Umami PatternLab
+type: theme
+base theme: umami
+description: 'A patterntheme used for the Umami food magazine demonstration site.'
+version: VERSION
+core: 8.x
+libraries:
+  - umami_pl/global
+  - umami_pl/messages
+  - umami_pl/webfonts
+
+libraries-override:
+  classy/messages: false
+
+regions:
+  header: Header
+  highlighted: Highlighted
+  tabs: Tabs
+  banner_top: 'Banner Top'
+  breadcrumbs: Breadcrumbs
+  page_title: 'Page Title'
+  content: Content
+  sidebar: Sidebar
+  footer: Footer
+  bottom: Bottom
+  page_top: 'Page top' # Needed by Drupal Core
+  page_bottom: 'Page bottom' # Needed by Drupal Core
+
+# MUST install `components` module: `drush dl components && drush en components -y`
+# For compatibility with Pattern Lab templates; this list must
+# always be the folders immediately under the `$sourceDir` patterns folder
+# `$sourceDir` = defined in `pattern-lab/config/config.yml` under `sourceDir
+# patterns folder = `$sourceDir` + `_patterns/`
+component-libraries:
+  base:
+    paths:
+      - components/_patterns/00-base
+  atoms:
+    paths:
+      - components/_patterns/01-atoms
+  molecules:
+    paths:
+      - components/_patterns/02-molecules
+  organisms:
+    paths:
+      - components/_patterns/03-organisms
+  templates:
+    paths:
+      - components/_patterns/04-templates
+  pages:
+    paths:
+      - components/_patterns/05-pages
