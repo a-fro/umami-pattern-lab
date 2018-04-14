@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ba351163b5323fc31640419798b4ea28",
+    "content-hash": "17a72586b4da235454726ac71abe98ad",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1355,6 +1355,82 @@
             ],
             "description": "Composer Plugin for updating the Drupal scaffold files when using drupal/core",
             "time": "2017-12-08T22:53:11+00:00"
+        },
+        {
+            "name": "drupal-pattern-lab/unified-twig-extensions",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drupal-pattern-lab/unified-twig-extensions.git",
+                "reference": "862b9deccab544ca68e3aaaccc257d14acc9b1f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drupal-pattern-lab/unified-twig-extensions/zipball/862b9deccab544ca68e3aaaccc257d14acc9b1f6",
+                "reference": "862b9deccab544ca68e3aaaccc257d14acc9b1f6",
+                "shasum": ""
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Salem Ghoweri",
+                    "role": "Contributor"
+                }
+            ],
+            "description": "Share Pattern Lab's custom Twig extensions with Drupal 8.",
+            "time": "2017-08-08T19:57:42+00:00"
+        },
+        {
+            "name": "drupal/components",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/components",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/components-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "adb1872a655466d575c2d3396f7ca2daba0a2918"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1461060840",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "JohnAlbin",
+                    "homepage": "https://www.drupal.org/user/32095"
+                },
+                {
+                    "name": "RobLoach",
+                    "homepage": "https://www.drupal.org/user/61114"
+                }
+            ],
+            "description": "Registers “component libraries” defined in modules and themes with the Twig system",
+            "homepage": "https://www.drupal.org/project/components",
+            "support": {
+                "source": "http://cgit.drupalcode.org/components"
+            }
         },
         {
             "name": "drupal/config_installer",
