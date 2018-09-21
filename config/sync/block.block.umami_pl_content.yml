@@ -1,0 +1,22 @@
+uuid: 0964a2dd-24f3-42bd-9607-f1ffd1a36739
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - umami_pl
+_core:
+  default_config_hash: fAAou3IaVWP7gVizy4k7aJ4njwWF5WnTnCVW68duc6Q
+id: umami_pl_content
+theme: umami_pl
+region: content
+weight: -7
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

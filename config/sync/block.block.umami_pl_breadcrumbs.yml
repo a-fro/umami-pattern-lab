@@ -1,0 +1,27 @@
+uuid: 276842bb-0ecc-40dd-9237-33de8c31106c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - umami_pl
+_core:
+  default_config_hash: kGBJMXyDmDg5sa7AQOgzrkg2O5AB1DXYm77YJZedhRE
+id: umami_pl_breadcrumbs
+theme: umami_pl
+region: breadcrumbs
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

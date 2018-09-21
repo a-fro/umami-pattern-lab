@@ -1,7 +1,5 @@
 <?php
 
-// @codingStandardsIgnoreFile
-
 /**
  * @file
  * Drupal site-specific configuration file.
@@ -88,7 +86,7 @@
  * );
  * @endcode
  */
-$databases = [];
+ $databases = array();
 
 /**
  * Customizing database settings.
@@ -146,11 +144,6 @@ $databases = [];
  * @code
  *   'prefix' => 'main_',
  * @endcode
- *
- * Per-table prefixes are deprecated as of Drupal 8.2, and will be removed in
- * Drupal 9.0. After that, only a single prefix for all tables will be
- * supported.
- *
  * To provide prefixes for specific tables, set 'prefix' as an array.
  * The array's keys are the table names and the values are the prefixes.
  * The 'default' element is mandatory and holds the prefix for any tables
@@ -251,7 +244,9 @@ $databases = [];
  *   );
  * @endcode
  */
-$config_directories = [];
+$config_directories = array(
+  CONFIG_SYNC_DIRECTORY => '../config/sync',
+);
 
 /**
  * Settings:
@@ -272,13 +267,8 @@ $config_directories = [];
  * by the user.
  *
  * @see install_select_profile()
- *
- * @deprecated in Drupal 8.3.0 and will be removed before Drupal 9.0.0. The
- *   install profile is written to the core.extension configuration. If a
- *   service requires the install profile use the 'install_profile' container
- *   parameter. Functional code can use \Drupal::installProfile().
  */
-# $settings['install_profile'] = '';
+# $settings['install_profile'] = 'config_installer';
 
 /**
  * Salt for one-time login links, cancel links, form tokens, etc.
@@ -297,7 +287,7 @@ $config_directories = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'V_4SpQrmhS8GdIu8GGsuyzUwyJnUj7RE4ECuaRsAMEAfSVr4zhswtuGwuzFRNRnZomsWE8p_pQ';
+$settings['hash_salt'] = 'YqQ3KmUPiFpDucG86V4KIl7tzLoR6NtMrwz5lf_X1ngsmkkkKR4oM1CY0_qTsXyLUt_NdgvUQg';
 
 /**
  * Deployment identifier.
@@ -379,7 +369,7 @@ $settings['update_free_access'] = FALSE;
  * Specify every reverse proxy IP address in your environment.
  * This setting is required if $settings['reverse_proxy'] is TRUE.
  */
-# $settings['reverse_proxy_addresses'] = ['a.b.c.d', ...];
+# $settings['reverse_proxy_addresses'] = array('a.b.c.d', ...);
 
 /**
  * Set this value if your proxy server sends the client IP in a header
@@ -442,15 +432,6 @@ $settings['update_free_access'] = FALSE;
  */
 # $settings['cache_ttl_4xx'] = 3600;
 
-/**
- * Expiration of cached forms.
- *
- * Drupal's Form API stores details of forms in a cache and these entries are
- * kept for at least 6 hours by default. Expired entries are cleared by cron.
- *
- * @see \Drupal\Core\Form\FormCache::setCache()
- */
-# $settings['form_cache_expiration'] = 21600;
 
 /**
  * Class Loader.
@@ -573,10 +554,10 @@ if ($settings['hash_salt']) {
  * The "en" part of the variable name, is dynamic and can be any langcode of
  * any added language. (eg locale_custom_strings_de for german).
  */
-# $settings['locale_custom_strings_en'][''] = [
+# $settings['locale_custom_strings_en'][''] = array(
 #   'forum'      => 'Discussion board',
 #   '@count min' => '@count minutes',
-# ];
+# );
 
 /**
  * A custom theme for the offline page:
@@ -630,7 +611,7 @@ if ($settings['hash_salt']) {
  *   override in a services.yml file in the same directory as settings.php
  *   (definitions in this file will override service definition defaults).
  */
-# $settings['bootstrap_config_storage'] = ['Drupal\Core\Config\BootstrapConfigStorageFactory', 'getFileStorage'];
+# $settings['bootstrap_config_storage'] = array('Drupal\Core\Config\BootstrapConfigStorageFactory', 'getFileStorage');
 
 /**
  * Configuration overrides.
@@ -654,7 +635,6 @@ if ($settings['hash_salt']) {
  * configuration values in settings.php will not fire any of the configuration
  * change events.
  */
-# $config['system.file']['path']['temporary'] = '/tmp';
 # $config['system.site']['name'] = 'My Drupal site';
 # $config['system.theme']['default'] = 'stark';
 # $config['user.settings']['anonymous'] = 'Visitor';
@@ -761,15 +741,7 @@ $settings['file_scan_ignore_directories'] = [
   'bower_components',
 ];
 
-/**
- * The default number of entities to update in a batch process.
- *
- * This is used by update and post-update functions that need to go through and
- * change all the entities on a site, so it is useful to increase this number
- * if your hosting configuration (i.e. RAM allocation, CPU speed) allows for a
- * larger number of entities to be processed in a single batch run.
- */
-$settings['entity_update_batch_size'] = 50;
+$settings['install_profile'] = 'demo_umami';
 
 /**
  * Load local development override configuration, if available.
@@ -781,9 +753,7 @@ $settings['entity_update_batch_size'] = 50;
  *
  * Keep this code block at the end of this file to take full effect.
  */
-#
+
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
-$config_directories['sync'] = '../config/sync';
-$settings['install_profile'] = 'demo_umami';

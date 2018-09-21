@@ -1,0 +1,14 @@
+uuid: 71d8dbe4-3abf-4c76-8eb2-98fa684ffd94
+name: 'Umami PatternLab'
+mail: aaronf@cornell.edu
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
