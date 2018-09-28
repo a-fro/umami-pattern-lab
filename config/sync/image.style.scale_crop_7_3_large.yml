@@ -1,9 +1,9 @@
-uuid: d64ce53c-ac7f-4e16-90c4-2c32079c83a6
+uuid: 6d688d13-e469-4cb2-b1dc-31ce5d768b13
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: hFsc6Ey1K9glJqIZw8AEzIedRonMse4oaRxT0B7roJw
+  default_config_hash: d2Uf3Y-qLJ-Rt2j6bO76DdtB9TVABKiqYgnOHTL7giQ
 name: scale_crop_7_3_large
 label: 'Scale crop 7:3 large'
 effects:
@@ -12,5 +12,6 @@ effects:
     id: image_scale_and_crop
     weight: 1
     data:
+      anchor: center-center
       width: 1440
       height: 617

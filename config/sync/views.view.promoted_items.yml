@@ -1,17 +1,17 @@
-uuid: 3b52558e-1b55-4a2f-8c51-0c3b37bedf33
+uuid: 61b18572-24fd-4f1e-896e-7c9596ef97a9
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.highlighted_medium
-    - core.entity_view_mode.node.highlighted_top
+    - core.entity_view_mode.node.card_common
+    - core.entity_view_mode.node.card_common_alt
     - node.type.article
     - node.type.recipe
   module:
     - node
     - user
 _core:
-  default_config_hash: oDSSYovL5mYLnuEJt6fJk329C6HWTLNwWGsdBYTjOCw
+  default_config_hash: qjNHKIobCA-7mrC5j1aXsVPxgSPXHN4gEHnonm46zOQ
 id: promoted_items
 label: 'Promoted Items'
 module: views
@@ -63,7 +63,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: highlighted_top
+          view_mode: card_common
       fields:
         title:
           id: title
@@ -257,7 +257,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: highlighted_medium
+          view_mode: card_common_alt
       pager:
         type: some
         options:

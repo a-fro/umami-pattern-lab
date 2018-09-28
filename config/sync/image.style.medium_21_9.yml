@@ -1,9 +1,9 @@
-uuid: 058b648b-df4d-457c-8569-ccfffa63efc2
+uuid: 087713d2-7248-4d09-8ac9-7f7bdedf4498
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: EiNlNAEoW_xXNPkV9rn_o5K9QjwwNsprSPLsWhIGsz8
+  default_config_hash: jR_eUYNRoOqowKZ3AvyczrM3X2OZA1jMREXChi4Js9U
 name: medium_21_9
 label: 'Medium 21:9 (1024x440)'
 effects:
@@ -12,5 +12,6 @@ effects:
     id: image_scale_and_crop
     weight: 1
     data:
+      anchor: center-center
       width: 1024
       height: 440

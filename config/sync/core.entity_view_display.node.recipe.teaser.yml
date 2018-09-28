@@ -1,4 +1,4 @@
-uuid: cf44d53b-c05b-44b8-820e-11b44bb171d0
+uuid: 04dc5f9a-cd25-4410-a995-8a3b6f3a7a03
 langcode: en
 status: true
 dependencies:
@@ -19,7 +19,7 @@ dependencies:
   module:
     - user
 _core:
-  default_config_hash: 5cm9JfVmGJHwVIKYKpYZX0Q98b-PjoCKfq7DSFSANVg
+  default_config_hash: pEHQi3r7yTchoJHIKGtXI5zN5WSP-JB_yNFifJn5iz8
 id: node.recipe.teaser
 targetEntityType: node
 bundle: recipe
@@ -29,6 +29,7 @@ content:
     weight: 100
     region: content
 hidden:
+  content_moderation_control: true
   field_author: true
   field_cooking_time: true
   field_difficulty: true

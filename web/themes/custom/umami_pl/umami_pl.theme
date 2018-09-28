@@ -18,7 +18,7 @@ function umami_pl_preprocess_html(&$variables) {
   // Add a sidebar class if the sidebar has content in it.
   if (!empty($variables['page']['sidebar'])) {
     $variables['attributes']['class'][] = 'two-columns';
-    $variables['#attached']['library'][] = 'umami_pl/two-columns';
+    $variables['#attached']['library'][] = 'umami/two-columns';
   }
   else {
     $variables['attributes']['class'][] = 'one-column';

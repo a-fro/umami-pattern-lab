@@ -1,9 +1,9 @@
-uuid: 218b7d5f-f4c1-43c8-8ddb-68d3b5738a17
+uuid: a11db092-a8b8-4b73-95ed-4dcbbb5f8153
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.highlighted_bottom
+    - core.entity_view_mode.node.card_common
     - field.field.node.article.body
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
@@ -13,11 +13,11 @@ dependencies:
     - responsive_image
     - user
 _core:
-  default_config_hash: zbLeymWATnw_s8MsMXgHuiqIfkd3pxEsIKECZhyD-dY
-id: node.article.highlighted_bottom
+  default_config_hash: ZyoPCtgTz1iCfStbUcpELk9gNuk6ARapNHXvNCxwA-I
+id: node.article.card_common
 targetEntityType: node
 bundle: article
-mode: highlighted_bottom
+mode: card_common
 content:
   field_image:
     type: responsive_image
@@ -25,10 +25,11 @@ content:
     region: content
     settings:
       responsive_image_style: 3_2_image
-      image_link: content
+      image_link: ''
     third_party_settings: {  }
     label: hidden
 hidden:
   body: true
+  content_moderation_control: true
   field_tags: true
   links: true

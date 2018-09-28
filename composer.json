@@ -21,7 +21,7 @@
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal-pattern-lab/unified-twig-extensions": "^0.1.0",
         "drupal/components": "^1.0",
-        "drupal/config_installer": "^1.7",
+        "drupal/config_installer": "^1.8",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.6",
         "drush/drush": "^9.0.0",

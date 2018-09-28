@@ -1,16 +1,16 @@
-uuid: 157a429e-160f-4077-8d6f-1deb54e70006
+uuid: 99792e7a-bf4f-4724-be5b-10793b839982
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.highlighted_small
+    - core.entity_view_mode.node.card
     - node.type.article
     - system.menu.main
   module:
     - node
     - user
 _core:
-  default_config_hash: FVdb8hlPPEm2qIpcMyUtxYL3aIGwW0yxEV6Sji4JpiE
+  default_config_hash: HwlZBsNTdPi2rS-aFUOo2mYJLBN3bQJ9_mgxj7nlujA
 id: featured_articles
 label: 'Featured Articles'
 module: views
@@ -75,7 +75,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: highlighted_small
+          view_mode: card
       fields:
         title:
           id: title

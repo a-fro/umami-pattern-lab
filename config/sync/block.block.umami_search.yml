@@ -1,4 +1,4 @@
-uuid: 2401262d-4e5e-476d-a7ee-4a1fc861f2c5
+uuid: 28949c90-e53f-4458-ba7d-8e087b293b7e
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,11 @@ dependencies:
   theme:
     - umami
 _core:
-  default_config_hash: e2AMQaKaAr8wc7fuChKcD6OS5N77bQWzkPVmPnTDCeE
+  default_config_hash: mscXHSYJmHeDvH4yB8D1lARAHXe1A7ZsYohvnWwlrCw
 id: umami_search
 theme: umami
-region: header
-weight: -6
+region: pre_header
+weight: -7
 provider: null
 plugin: search_form_block
 settings:

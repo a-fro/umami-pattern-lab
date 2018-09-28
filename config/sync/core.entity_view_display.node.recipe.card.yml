@@ -1,9 +1,9 @@
-uuid: 471ecee9-44d7-4ed2-a5b7-817e8b04d72d
+uuid: 4d88f1ba-3149-4ad4-ae55-8bcefbbc37ee
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.highlighted_small
+    - core.entity_view_mode.node.card
     - field.field.node.recipe.field_author
     - field.field.node.recipe.field_cooking_time
     - field.field.node.recipe.field_difficulty
@@ -22,34 +22,30 @@ dependencies:
     - responsive_image
     - user
 _core:
-  default_config_hash: vw0R3pZj98wJKp_WVo-3OMMM1N8zOgDrjYd-adCuKyM
-id: node.recipe.highlighted_small
+  default_config_hash: RlUguTT7jW2Mu1pA_C-kVTHGnOlWx4ea10dkERB9hHs
+id: node.recipe.card
 targetEntityType: node
 bundle: recipe
-mode: highlighted_small
+mode: card
 content:
   field_difficulty:
-    weight: 1
-    label: above
+    weight: 0
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_image:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       responsive_image_style: 3_2_image
-      image_link: content
+      image_link: ''
     third_party_settings: {  }
     type: responsive_image
     region: content
-  links:
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  content_moderation_control: true
   field_author: true
   field_cooking_time: true
   field_ingredients: true
@@ -59,3 +55,4 @@ hidden:
   field_recipe_instruction: true
   field_summary: true
   field_tags: true
+  links: true
