@@ -1,0 +1,18 @@
+# Image
+banner_img_src:
+  "//umami-pl.test/sites/default/files/veggie-pasta-bake-hero-umami.jpg"
+banner_img_alt:
+  "This is the card image's alt text"
+banner_image_output_image_tag: TRUE
+
+# Title
+banner_title: "Super easy vegetarian pasta bake"
+
+# Summary
+banner_summary: "A wholesome pasta bake is the ultimate comfort food. This delicious bake is super quick to prepare and an ideal midweek meal for all the family."
+
+# Link
+banner_link_url:
+  "#"
+banner_link_text:
+  'Super easy vegetarian pasta bake'

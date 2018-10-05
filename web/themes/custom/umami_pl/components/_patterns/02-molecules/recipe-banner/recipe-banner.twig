@@ -1,0 +1,21 @@
+<div class="recipe-banner">
+  <div class="recipe-banner__wrapper">
+    <div class="recipe-banner__image">
+      {% if banner_img_src %}
+        {% include "@atoms/04-images/00-image/responsive-image.twig" with {
+          "img_src": banner_img_src,
+          "img_alt": banner_img_alt,
+          "output_image_tag": banner_image_output_image_tag,
+          "responsive_image_base_class": 'image',
+        } %}
+      {% endif %}
+    </div>
+    <div class="recipe-banner__content">
+      <h2 class="recipe-banner__title">{{ banner_title }}</h2>
+      <div class="recipe-banner__summary">
+        <p>A wholesome pasta bake is the ultimate comfort food. This delicious bake is super quick to prepare and an ideal midweek meal for all the family.</p>
+      </div>
+      <a href="{{ banner_link_url }}" class="button">{{ banner_link_text }}</a>
+    </div>
+  </div>
+</div>

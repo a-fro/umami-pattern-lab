@@ -1,0 +1,44 @@
+.recipe-banner {
+  background-image: url(http://umami.test/sites/default/files/veggie-pasta-bake-hero-umami.jpg);
+  background-size: 0 0;
+
+  @include large {
+    background-color: #464646;
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    @include heading-large;
+
+    font-size: 1.424rem;
+  }
+
+  &__wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 1em;
+    height: 0; /* Required for flexbox vertical centering in IE11. Min-height will take precedence. */
+    min-height: 43vw;
+    align-items: center;
+
+    color: white;
+  }
+
+  &__content {
+    margin: 0;
+    flex: 0 0 30%;
+    color: #fff;
+  }
+
+  &__image {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    word-wrap: normal;
+  }
+}
