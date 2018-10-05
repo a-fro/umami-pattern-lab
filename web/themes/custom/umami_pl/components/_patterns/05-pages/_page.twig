@@ -21,7 +21,6 @@
  *   linking to the front page. This includes the language domain or prefix.
  *
  * Page content (in order of occurrence in the default page.html.twig):
- * - messages: Status and error messages. Should be displayed prominently.
  * - node: Fully loaded node, if there is an automatically-loaded node
  *   associated with the page and the node ID is the second argument in the
  *   page's path (e.g. node/12345 and node/12345/revisions, but not
@@ -43,35 +42,103 @@
  * @see html.html.twig
  */
 #}
+<div class="layout-container">
 
-{% if page.sidebar|render %} {# this may or may not correctly filter sidebar #}
-  {% set sidebar = TRUE %}
-{% endif %}
+  {% if page.pre_header|render|striptags|trim is not empty or
+     page.header|render|striptags|trim is not empty %}
+    <header class="layout-header" role="banner">
+      <div class="container">
+        {% if page.pre_header|render|striptags|trim is not empty %}
+          {{ page.pre_header }}
+        {% endif %}
+        {% if page.header|render|striptags|trim is not empty %}
+          {{ page.header }}
+        {% endif %}
+      </div>
+    </header>
+  {% endif %}
 
-{% extends "@templates/_default.twig" %}
-  {% block page_header %}
-    {% if page.header %}
-      {{ page.header }}
-    {% endif %}
-  {% endblock %}
 
-  {% block page_system %}
-    {{ page.breadcrumb }}
+  <div class="layout-highlighted">
     {{ page.highlighted }}
-    {{ page.help }}
-    {{ messages }}
-  {% endblock %}
+  </div>
 
-  {% block page_sidebar %}
-    {{ page.sidebar }}
-  {% endblock %}
 
-  {% block page_content %}
-    {{ page.content }}
-  {% endblock %}
+  {% if page.tabs %}
+  <div class="layout-tabs">
+    <div class="container">
+      {{ page.tabs }}
+    </div>
+  </div>
+  {% endif %}
 
-  {% block page_footer %}
-    {% if page.footer %}
-      {{ page.footer }}
+  {% if page.banner_top|render|striptags|trim is not empty %}
+    <div class="layout-banner-top">
+      {{ page.banner_top }}
+    </div>
+  {% endif %}
+
+  {% if page.breadcrumbs|render|striptags|trim is not empty %}
+  <div class="layout-breadcrumbs">
+    <div class="container">
+      {{ page.breadcrumbs }}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if not node %}
+    {% if page.page_title|render|striptags|trim is not empty %}
+      <div class="layout-page-title">
+        {% if is_front %}
+          <div class="is-front container">
+            {{ page.page_title }}
+          </div>
+          {% else %}
+          <div class="container">
+            {{ page.page_title }}
+          </div>
+        {% endif %}
+      </div>
     {% endif %}
-  {% endblock %}
+  {% endif %}
+
+  <main role="main" class="main container">
+
+    <div class="layout-content">
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+      {{ page.content }}
+    </div>{# /.layout-content #}
+
+    {% if page.sidebar|render|striptags|trim is not empty %}
+      <aside class="layout-sidebar" role="complementary">
+        {{ page.sidebar }}
+      </aside>
+    {% endif %}
+
+  </main>
+
+  {% if page.content_bottom|render|striptags|trim is not empty %}
+    <div class="layout-content-bottom">
+      {{ page.content_bottom }}
+    </div>
+  {% endif %}
+
+  {% if page.footer|render|striptags|trim is not empty %}
+  <div class="layout-footer">
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        {{ page.footer }}
+      </div>
+    </footer>
+  </div>
+  {% endif %}
+
+  {% if page.bottom|render|striptags|trim is not empty %}
+    <div class="layout-bottom">
+      <div class="container">
+        {{ page.bottom }}
+      </div>
+    </div>
+  {% endif %}
+
+</div>{# /.layout-container #}

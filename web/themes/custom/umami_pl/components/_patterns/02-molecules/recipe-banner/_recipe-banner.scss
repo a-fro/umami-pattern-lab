@@ -16,29 +16,39 @@
   }
 
   &__wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    padding: 0 1em;
-    height: 0; /* Required for flexbox vertical centering in IE11. Min-height will take precedence. */
-    min-height: 43vw;
-    align-items: center;
-
-    color: white;
+    @include large {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      padding: 0 1em;
+      height: 0; /* Required for flexbox vertical centering in IE11. Min-height will take precedence. */
+      min-height: 43vw;
+      align-items: center;
+    }
   }
 
   &__content {
-    margin: 0;
-    flex: 0 0 30%;
-    color: #fff;
+    margin: 1em;
+
+    @include large {
+      margin: 0;
+      flex: 0 0 30%;
+      color: #fff;
+    }
   }
 
   &__image {
-    position: absolute !important;
-    clip: rect(1px, 1px, 1px, 1px);
-    overflow: hidden;
-    height: 1px;
-    width: 1px;
-    word-wrap: normal;
+    @include large {
+      position: absolute !important;
+      clip: rect(1px, 1px, 1px, 1px);
+      overflow: hidden;
+      height: 1px;
+      width: 1px;
+      word-wrap: normal;
+    }
+  }
+
+  &__link a {
+    padding: 0.5em 1.5em 0.4em;
   }
 }
