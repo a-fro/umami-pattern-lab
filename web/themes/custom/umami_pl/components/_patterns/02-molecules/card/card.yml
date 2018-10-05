@@ -1,0 +1,30 @@
+# Image
+card_img_modifiers:
+card_base_class: 'card'
+card_img_src:
+  "https://placeimg.com/1080/720/nature"
+card_img_alt:
+  "This is the card image's alt text"
+card_image_output_image_tag: TRUE
+
+# Title
+card_title:
+  "Fiery chili sauce"
+card_title_link: ['#']
+card_title_blockname:
+
+card_subtitle_link:
+card_subtitle_modifiers:
+  1:
+    no-space
+card_subtitle_blockname:
+
+# Link
+card_link_url:
+  "#"
+card_link_text:
+  'View recipe'
+card_link_modifiers:
+  1:
+    read-more
+card_link_blockname:

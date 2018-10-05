@@ -1,0 +1,31 @@
+@mixin button($bg:$black, $color:$white, $hoverBg: $gray, $hoverColor: $white) {
+  display: inline-block;
+  padding: 0.5em 1.5em 0.4em;
+  border: 0;
+  border-radius: 4px;
+  background-color: #d93760;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Scope One', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  transition: background-color 0.5s ease;
+
+  &:visited {
+    color: $color;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #00836d;
+    color: #fff;
+    box-shadow: 0 0 0 2px currentColor inset;
+    outline: none;
+  }
+}
+
+.button {
+  @include button;
+}

@@ -1,0 +1,14 @@
+@mixin svg-common {
+  background: url("svg/sprite.css.svg") no-repeat;
+}
+
+@mixin sprite-bars {
+  @include svg-common;
+
+  background-position: 0 0;
+}
+
+.sprite-bars {
+  @include sprite-bars;
+}
+

@@ -94,7 +94,7 @@
       baseDir: '../../../',
       startPath: 'themes/custom/umami_pl/pattern-lab/public/',
       // Uncomment below if using a specific local url
-      domain: 'umami-pattern-lab.lndo.site:8000',
+      domain: 'umami-pl.test',
       notify: false,
       openBrowserAtStart: true,
       reloadOnRestart: true,

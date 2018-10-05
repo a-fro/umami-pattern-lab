@@ -1,0 +1,46 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid $color-card-border;
+  background-color: $color-card-bg;
+
+  &__image {
+    margin-bottom: 1.2em;
+  }
+
+  .pl & {
+    max-width: 300px;
+  }
+}
+
+.card__title {
+  @include heading-medium($font-size: 1.424rem);
+
+  flex-grow: 1;
+
+  &-link {
+    @include link--heading;
+  }
+}
+
+.card__body {
+  margin: 0.7em 0 1em;
+}
+
+.card__link {
+  @include link;
+  @include link--more;
+}
+
+.card__button {
+  @include button;
+}
+
+// Variations
+.card--alt {
+  .card__copy {
+    order: -1;
+  }
+}
