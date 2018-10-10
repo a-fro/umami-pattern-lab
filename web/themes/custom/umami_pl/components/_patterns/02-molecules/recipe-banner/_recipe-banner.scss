@@ -1,5 +1,7 @@
 .recipe-banner {
-  background-image: url(http://umami.test/sites/default/files/veggie-pasta-bake-hero-umami.jpg);
+  @include full-width;
+
+  background-image: url(../components/images/veggie-pasta-bake-hero-umami.jpg);
   background-size: 0 0;
 
   @include large {
@@ -48,7 +50,7 @@
     }
   }
 
-  &__link a {
+  &__link a{
     padding: 0.5em 1.5em 0.4em;
   }
 }
