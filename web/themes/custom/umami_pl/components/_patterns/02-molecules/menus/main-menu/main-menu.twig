@@ -16,6 +16,6 @@
 <nav id="main-nav" class="main-nav">
   {% include "@molecules/menus/_menu.twig" with {
     menu_class: "main-menu",
-    items: menu_items,
+    items: pl ? demo.nav.items : menu_items,
   } %}
 </nav>

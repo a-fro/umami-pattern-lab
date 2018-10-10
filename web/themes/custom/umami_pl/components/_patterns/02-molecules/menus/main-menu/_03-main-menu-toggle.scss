@@ -1,3 +1,7 @@
+#block-umami-pl-main-menu--2 {
+  @include breakout;
+}
+
 // Toggle
 .toggle-expand {
   @include link;
@@ -7,20 +11,18 @@
   }
 
   display: inline-block;
+  text-align: right;
   padding: $space;
   text-decoration: none;
   width: 100%;
 
-  // See main-menu.js
-  &--open {
-    background-color: $gray-dark;
+  &:hover {
+    background-color: transparent;
   }
 }
 
 .toggle-expand__text {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: bold;
+  visibility: hidden;
 
   .toggle-expand--open & {
     color: $white;
@@ -32,11 +34,11 @@
   height: 3rem;
   width: 3rem;
   margin: 0 auto;
+  float: right;
 }
 
 .toggle-expand__open {
   display: inline-block;
-  text-align: center;
 
   .toggle-expand--open & {
     display: none;
@@ -48,11 +50,11 @@
   text-align: center;
 
   &::before {
-    color: $white;
+    color: $black;
     content: "X";
     display: block;
     font-size: 2.5rem;
-    line-height: 2;
+    line-height: 1;
   }
 
   .toggle-expand--open & {
