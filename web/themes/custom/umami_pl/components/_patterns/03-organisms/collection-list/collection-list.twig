@@ -12,7 +12,7 @@
   {% endif %}
 
   <div {{ bem(collection_base_class, ([]), collection_blockname) }}>
-    {% for item in list_items %}
+    {% for item in collection_list_items %}
       {% include "@atoms/01-links/link/link.twig" with {
         "link_content": item.name,
         "link_url": item.url,

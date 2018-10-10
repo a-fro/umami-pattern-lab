@@ -6,13 +6,7 @@ $sidebar-width: 33%;
 $gutter: $space;
 $main-width: calc(100% - (#{$sidebar-width} + #{$gutter}));
 
-.header,
-.main,
-.footer {
-  @include wrapper;
 
-  margin-bottom: 4em;
-}
 
 //
 // Layout Using Flexbox (IE11+).
@@ -46,20 +40,14 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$gutter}));
 //   }
 // }
 
-// .layout--content-bottom {
-//   background: $color-layout--content-bottom;
-// }
-
-// .layout--footer {
-//   background: $color-layout--footer;
-// }
-
 //
 // Layout Using CSS Grid (NO IE11 support)
 // Remove Flexbox code above and uncomment this section to use CSS Grid.
 //
 
 .main {
+  @include trailer(1);
+
   &--with-sidebar {
     @include large {
       display: grid;
@@ -78,4 +66,12 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$gutter}));
 .main-content {
   grid-area: content;
   width: 100%;
+}
+
+.layout--content-bottom {
+  background: $color-layout--content-bottom;
+}
+
+.layout--footer {
+  background: $color-layout--footer;
 }

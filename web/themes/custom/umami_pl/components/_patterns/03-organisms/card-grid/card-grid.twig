@@ -1,6 +1,7 @@
 {% extends "@base/layouts/grid/00-grid.twig" %}
 
 {% block grid_content %}
+  {% set cards = (cards) ? cards : demo.cards %}
   {% for card in cards %}
     {% include "@molecules/card/01-card.twig" with {
       "card_blockname": card.blockname,

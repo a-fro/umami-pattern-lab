@@ -1,8 +1,33 @@
+header: true
+preheader: true
 demo:
   branding:
     site_logo:
       '../../images/logo.svg'
     site_name:
       'Umami Food Magazine'
-header: true
-preheader: true
+banner_img_src:
+  "//umami-pl.test/sites/default/files/veggie-pasta-bake-hero-umami.jpg"
+banner_title: "Super easy vegetarian pasta bake"
+banner_summary: "A wholesome pasta bake is the ultimate comfort food. This delicious bake is super quick to prepare and an ideal midweek meal for all the family."
+banner_link_url: "#"
+banner_link_text: 'Super easy vegetarian pasta bake'
+collection_label:
+  "Recipe Collections"
+collection_list_items:
+  - {"name": "Alcohol free", "url": "#"}
+  - {"name": "Baked", "url": "#"}
+  - {"name": "Baking", "url": "#"}
+  - {"name": "Cake", "url": "#"}
+  - {"name": "Carrots", "url": "#"}
+  - {"name": "Cocktail party", "url": "#"}
+  - {"name": "Dinner party", "url": "#"}
+  - {"name": "Drinks", "url": "#"}
+  - {"name": "Egg", "url": "#"}
+  - {"name": "Grow your own", "url": "#"}
+  - {"name": "Healthy", "url": "#"}
+  - {"name": "Herbs", "url": "#"}
+  - {"name": "Learn to cook", "url": "#"}
+  - {"name": "Mushrooms", "url": "#"}
+  - {"name": "Party", "url": "#"}
+  - {"name": "Pasta", "url": "#"}

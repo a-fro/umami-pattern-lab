@@ -5,51 +5,41 @@ grid_blockname:
 grid_modifiers:
   1:
     one-x-two
+  2:
+    wrapped
 cards:
-  1:
+  -
     card_modifiers:
       1: "grid-item"
     card_img_src:
-      "https://placeimg.com/600/400/nature"
+      "../../images/mojito-mocktail.jpg"
     card_title:
-      "This is a title too"
-    card_subtitle:
-      ""
-    card_body:
-      ""
+      "Skip the spirits with delicious mocktails"
     card_link_url:
       "#"
     card_link_text:
       "View article"
-  2:
+  -
     card_modifiers:
       1: "grid-item"
-      2: "alt"
+      2: 'alt'
     card_img_src:
-      "https://placeimg.com/300/300/nature"
+      "http://umami.test/sites/default/files/styles/square_large/public/chili-sauce-umami.jpg"
     card_title:
-      "This is a title too"
-    card_subtitle:
-      ""
-    card_body:
-      ""
-    card_link_text:
-      'View recipe'
+      "Fiery chili sauce"
     card_link_url:
       "#"
-  3:
+    card_link_text:
+      "View recipe"
+  -
     card_modifiers:
       1: "grid-item"
-      2: "alt"
+      2: 'alt'
     card_img_src:
-      "https://placeimg.com/300/300/nature"
+      "http://umami.test/sites/default/files/styles/square_large/public/crema-catalana-umami.jpg"
     card_title:
-      "This is a title too"
-    card_subtitle:
-      ""
-    card_body:
-      ""
-    card_link_text:
-      'View recipe'
+      "Crema catalana"
     card_link_url:
       "#"
+    card_link_text:
+      "View recipe"

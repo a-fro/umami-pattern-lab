@@ -1,17 +1,31 @@
 .card__grid {
   @include margin;
+  @include grid;
+  @include two-column-grid;
+
+  &--wrapped {
+    @include wrapper;
+  }
+
+  &--two {
+    @include two-column-grid;
+  }
+
+  .pl & {
+    .card {
+      max-width: 100%;
+    }
+
+    &--alt {
+      @include large {
+        max-width: 50%;
+      }
+    }
+  }
 }
 
 .card__grid--one-x-two {
   @include one-by-two-grid;
-
-  .pl & {
-    @include wrapper;
-
-    .card {
-      max-width: 100%;
-    }
-  }
 }
 
 .card--grid-item {

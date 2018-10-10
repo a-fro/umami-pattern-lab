@@ -1,73 +1,49 @@
-{% embed "@templates/_default.twig" with {
-  menu_items: header.menu_items,
-  footer_menu_items: footer.menu_items,
-} %}
+{% set header %}
+  {% include "@organisms/site/site-header/site-header.twig" with {
+    header: true,
+    preheader: true
+  }%}
+{% endset %}
 
-  {% block page_content %}
+{% set banner_top %}
+  {% include "@molecules/recipe-banner/recipe-banner.twig" %}
+{% endset %}
 
-    {% if site_title %}
-      {% include "@atoms/02-text/00-headings/_heading.twig" with {
-        "heading_level": 1,
-        "heading": "Home",
-        "heading_modifiers": ["margin"],
-      } %}
-    {% endif %}
+{% set content %}
+  {% include "@organisms/card-grid/card-grid.twig" with {
+    grid_modifiers: ['one-x-two'],
+    grid_blockname: 'card',
+    cards: demo.promoted_items,
+  }%}
 
-    {% include "@organisms/info-box-grid/info-box-grid.twig" with {
-      boxes: {
-        1: {
-          ib_modifiers: {
-            1: "grid-item"
-          },
-          infobox_title: "This is why this thing matters",
-          infobox_text: "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.",
-          infobox_link: "#",
-        },
-        2: {
-          ib_modifiers: {
-            1: "grid-item"
-          },
-          infobox_title: "Make sure you read it well",
-          infobox_text: "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.",
-          infobox_link: "#",
-        }
-      }
-    } %}
+  <div class="is-front">
+    <h1 class="h1">Home</h1>
+    <h2 class="h2 text-align-center">Explore recipes across every type of occasion, ingredient, and skill level.</h2>
+  </div>
 
-    {% include "@organisms/card-grid/card-grid.twig" with {
-      "grid_blockname": "card",
-      "grid_modifiers": ["divider", "columns-3"],
-      "cards": {
-        1: {
-          "card_modifiers": ["grid-item", "divider-3"],
-          "card_img_src": "https://placeimg.com/480/480/people",
-          "card_image_output_image_tag": TRUE,
-          "card_title": "This is the first featured item",
-          "card_link_url": "#",
-          "card_subtitle": "About this thing",
-          "card_body": "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.",
-        },
-        2: {
-          "card_modifiers": ["grid-item","divider-3"],
-          "card_img_src": "https://placeimg.com/480/480/people",
-          "card_image_output_image_tag": TRUE,
-          "card_title": "This is the second",
-          "card_link_url": "#",
-          "card_subtitle": "About this other thing",
-          "card_body": "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.",
-        },
-        3: {
-          "card_modifiers": ["grid-item","divider-3"],
-          "card_img_src": "https://placeimg.com/480/480/people",
-          "card_image_output_image_tag": TRUE,
-          "card_title": "The Final",
-          "card_link_url": "#",
-          "card_subtitle": "Is the most interesting",
-          "card_body": "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat.",
-        },
-      }
-    } %}
+  {% include "@organisms/card-grid/card-grid.twig" with {
+    grid_modifiers: ['two'],
+    grid_blockname: 'card',
+    cards: demo.cards,
+  }%}
+{% endset %}
 
-  {% endblock %}
+{% set content_bottom %}
+  {% include "@organisms/collection-list/collection-list.twig" %}
+{% endset %}
 
-{% endembed %}
+{% set footer %}
+  {% include "@organisms/site/site-footer/site-footer.twig" %}
+{% endset %}
+
+{% set page = {
+  header: header,
+  banner_top: banner_top,
+  content: content,
+  content_bottom: content_bottom,
+  footer: footer
+}%}
+
+{% include "@pages/_page.twig" with {
+  page: page
+}%}

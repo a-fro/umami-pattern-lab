@@ -4,45 +4,30 @@ grid_blockname:
   card
 grid_modifiers:
   1:
-    divider
-  2:
-    columns-3
+    alt
 cards:
-  1:
+  -
     card_modifiers:
       1: "grid-item"
-      2: "divider-3"
-    card_img:
-      "https://placeimg.com/480/300/nature"
+      2: 'alt'
+    card_img_src:
+      "http://umami.test/sites/default/files/styles/square_large/public/chili-sauce-umami.jpg"
     card_title:
-      "This is a title too"
-    card_subtitle:
-      "November 11, 2016"
-    card_body:
-      ""
-    card_link:
-      ""
-  2:
+      "Fiery chili sauce"
+    card_link_url:
+      "#"
+    card_link_text:
+      "View recipe"
+  -
     card_modifiers:
       1: "grid-item"
-      2: "divider-3"
-    card_img:
-      "https://placeimg.com/480/300/nature"
+      2: 'alt'
+    card_img_src:
+      "http://umami.test/sites/default/files/styles/square_large/public/crema-catalana-umami.jpg"
     card_title:
-      "This is a title too"
-    card_subtitle:
-      "October 27, 2016"
-    card_body:
-      ""
-  3:
-    card_modifiers:
-      1: "grid-item"
-      2: "divider-3"
-    card_img:
-      "https://placeimg.com/480/300/nature"
-    card_title:
-      "This is a title too"
-    card_subtitle:
-      "October 4, 2016"
-    card_body:
-      ""
+      "Crema catalana"
+    card_link_url:
+      "#"
+    card_link_text:
+      "View recipe"
+

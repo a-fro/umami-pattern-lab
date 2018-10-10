@@ -124,6 +124,10 @@
   @include heading-xs();
 }
 
+.text-align-center {
+  text-align: center;
+}
+
 // TODO: BEM selectors should be applied to wysiwyg-created content
 
 .text-long {
