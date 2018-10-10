@@ -13,10 +13,11 @@ sprite:
   js:
     components/js/svgxuse.min.js: { attributes: { defer: true } }
 
-accordion:
-  js:
-    dist/02-molecules/accordion-item/accordion-item.js: {}
-
 tabs:
   js:
     dist/02-molecules/menus/tabs/tabs.js: {}
+
+webfonts:
+  css:
+    theme:
+      'https://fonts.googleapis.com/css?family=Open+Sans|Scope+One': { type: external, minified: true }

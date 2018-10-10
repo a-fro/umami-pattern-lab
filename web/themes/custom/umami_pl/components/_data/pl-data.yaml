@@ -1,0 +1,7 @@
+demo:
+  branding:
+    site_logo:
+      '../../images/logo.svg'
+    site_name:
+      'Umami Food Magazine'
+

@@ -5,7 +5,15 @@
 
 // General
 var gulp = require('gulp-help')(require('gulp'));
-var localConfig = {};
+var localConfig = {
+  cssConfig: {
+    includePaths: [
+      'node_modules/modularscale-sass/stylesheets',
+      'node_modules/sass-tools/lib',
+      'node_modules/compass-mixins/lib/',
+    ]
+  },
+};
 
 try {
   localConfig = require('./local.gulp-config');

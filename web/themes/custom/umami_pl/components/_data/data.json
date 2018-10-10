@@ -1,6 +1,7 @@
 {
   "title" : "Pattern Lab",
   "htmlClass": "pl",
+  "pl": true,
   "bodyClass": "body",
   "img": {
     "landscape_4x3": {
@@ -90,5 +91,7 @@
     { },
     { },
     { }
-  ]
+  ],
+  "site_logo": "../../images/logo.svg",
+  "site_name": "Umami Food Magazine"
 }
