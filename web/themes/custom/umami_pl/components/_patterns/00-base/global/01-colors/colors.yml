@@ -10,7 +10,7 @@ items:
   - name: $gray-light
     value: '#999'
   - name: $gray
-    value: '#666'
+    value: '#767775'
   - name: $gray-dark
     value: '#444'
   - name: $gray-darker

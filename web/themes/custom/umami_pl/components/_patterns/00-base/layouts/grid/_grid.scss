@@ -6,3 +6,19 @@
 .grid {
   @include grid;
 }
+
+.grid--2 .grid {
+  @include two-column-grid;
+
+  header {
+    @include span-grid;
+  }
+}
+
+.grid--3 {
+  @include three-column-grid;
+}
+
+.grid--one-x-two {
+  @include one-by-two-grid;
+}

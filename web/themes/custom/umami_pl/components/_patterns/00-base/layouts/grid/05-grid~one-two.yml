@@ -1,0 +1,11 @@
+grid_label:
+  "One by two grid"
+grid_modifiers:
+  1:
+    one-x-two
+  2:
+    pl
+items:
+  one:
+  two:
+  three:

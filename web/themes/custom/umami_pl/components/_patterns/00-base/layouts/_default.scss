@@ -46,6 +46,14 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$gutter}));
   }
 }
 
+.layout--content-bottom {
+  background: $color-layout--content-bottom;
+}
+
+.layout--footer {
+  background: $color-layout--footer;
+}
+
 //
 // Layout Using CSS Grid (NO IE11 support)
 // Remove Flexbox code above and uncomment this section to use CSS Grid.
