@@ -1,12 +1,11 @@
-<header class="header">
+<div class="pre-header region--pre-header">
+  {% block pre_header_content %}
+    {% include "@molecules/search/search.twig" %}
+  {% endblock %}
+</div>
+<div class="header region--header">
   {% block header_content %}
-    {% include "@atoms/04-images/00-image/figure.twig" with {
-      img_src: '../../images/logo.png',
-      img_alt: 'Logo',
-      img_url: logo_link_url|default('/'),
-      image_figure_base_class: 'logo',
-      image_link_blockname: 'logo',
-    } %}
+    {% include "@molecules/branding/branding.twig" %}
     {% include "@molecules/menus/main-menu/main-menu.twig" %}
   {% endblock %}
-</header>
+</div>
