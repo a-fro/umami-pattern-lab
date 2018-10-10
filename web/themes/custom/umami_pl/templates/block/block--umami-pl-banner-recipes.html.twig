@@ -1,11 +1,8 @@
+{% set link = content.field_content_link|field_value[0] %}
 {% include "@molecules/recipe-banner/recipe-banner.twig" with {
-  "banner_img_src":
-    "//umami-pl.test/sites/default/files/veggie-pasta-bake-hero-umami.jpg",
-  "banner_img_alt":
-    "This is the card image's alt text",
   "banner_image_output_image_tag": TRUE,
-  "banner_title": "Super easy vegetarian pasta bake",
-  "banner_summary": "A wholesome pasta bake is the ultimate comfort food. This delicious bake is super quick to prepare and an ideal midweek meal for all the family.",
-  "banner_link_url": url,
-  "banner_link_text": 'Super easy vegetarian pasta bake'
+  "banner_title": content.field_title|field_value,
+  "banner_summary": content.field_summary|field_value,
+  "banner_link_url": link['#url'],
+  "banner_link_text": link['#title']
 }%}
