@@ -1,0 +1,16 @@
+{% set rows = drupal_view_result('recipe_collections', 'block') %}
+
+{% set list_items = [] %}
+{% for row in rows %}
+  {% set list_items = list_items|merge([
+    {
+      "name": row.taxonomy_term_field_data_name,
+      "url": path('entity.taxonomy_term.canonical', {'taxonomy_term': row.tid})
+    }]
+  )%}
+{% endfor %}
+
+{% include "@organisms/collection-list/collection-list.twig" with {
+  "collection_label": "Recipe collections",
+  "list_items": list_items
+} %}
