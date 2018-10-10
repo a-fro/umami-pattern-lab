@@ -1,0 +1,55 @@
+grid_label:
+  "Promoted grid"
+grid_blockname:
+  card
+grid_modifiers:
+  1:
+    one-x-two
+cards:
+  1:
+    card_modifiers:
+      1: "grid-item"
+    card_img_src:
+      "https://placeimg.com/600/400/nature"
+    card_title:
+      "This is a title too"
+    card_subtitle:
+      ""
+    card_body:
+      ""
+    card_link_url:
+      "#"
+    card_link_text:
+      "View article"
+  2:
+    card_modifiers:
+      1: "grid-item"
+      2: "alt"
+    card_img_src:
+      "https://placeimg.com/300/300/nature"
+    card_title:
+      "This is a title too"
+    card_subtitle:
+      ""
+    card_body:
+      ""
+    card_link_text:
+      'View recipe'
+    card_link_url:
+      "#"
+  3:
+    card_modifiers:
+      1: "grid-item"
+      2: "alt"
+    card_img_src:
+      "https://placeimg.com/300/300/nature"
+    card_title:
+      "This is a title too"
+    card_subtitle:
+      ""
+    card_body:
+      ""
+    card_link_text:
+      'View recipe'
+    card_link_url:
+      "#"

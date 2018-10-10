@@ -1,0 +1,16 @@
+{% set rows = [] %}
+{% set rows = rows|merge(drupal_view_result('promoted_items', 'block_1')) %}
+{% set rows = rows|merge(drupal_view_result('promoted_items', 'attachment_1')) %}
+
+{% embed "@organisms/card-grid/card-grid.twig" with {
+  grid_modifiers: ['promoted'],
+  grid_base_class: 'card',
+  grid_blockname: 'grid'
+} %}
+  {% block grid_content %}
+    {% for row in rows %}
+      {% set view_mode = (loop.first) ? 'card_common' : 'card_common_alt' %}
+      {{ drupal_entity('node', row.nid, view_mode) }}
+    {% endfor %}
+  {% endblock %}
+{% endembed %}
