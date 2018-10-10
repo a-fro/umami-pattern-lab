@@ -2,7 +2,7 @@
 // Generic header styles:
 // All arguments are optional. If not defined, the defaults below will be used
 //
-@mixin heading-xl($font-family: $font-heading, $font-size: 2.369rem, $line-height: 1.2, $color: inherit, $color-link: inherit, $color-link-hover: inherit, $font-weight: 400, $margin: 0 0 0.5em) {
+@mixin heading-xl($font-family: $font-heading, $font-size: 2.369rem, $line-height: 1.2, $color: inherit, $color-link: inherit, $color-link-hover: inherit, $font-weight: 400, $margin: 0 0 1em) {
   color: #{$color};
   font-family: #{$font-family};
   font-weight: #{$font-weight};
@@ -21,7 +21,7 @@
   }
 }
 
-@mixin heading-large($font-family: $font-heading, $font-size: 1.777rem, $line-height: 1.2, $color: inherit, $color-link: inherit, $color-link-hover: inherit, $font-weight: 400, $margin: 0 0 0.5em) {
+@mixin heading-large($font-family: $font-heading, $font-size: 1.777rem, $line-height: 1.2, $color: inherit, $color-link: inherit, $color-link-hover: inherit, $font-weight: 400, $margin: 0 0 1em) {
   color: #{$color};
   font-family: #{$font-family};
   font-weight: #{$font-weight};

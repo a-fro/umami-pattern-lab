@@ -1,5 +1,4 @@
 .card__grid {
-  // @include grid;
   @include margin;
 }
 
@@ -39,6 +38,4 @@
   @include large {
     @include rhythm(3);
   }
-
 }
-

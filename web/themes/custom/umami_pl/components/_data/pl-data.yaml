@@ -4,4 +4,5 @@ demo:
       '../../images/logo.svg'
     site_name:
       'Umami Food Magazine'
-
+header: true
+preheader: true

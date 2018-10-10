@@ -2,7 +2,7 @@
   {% set item_modifiers = [] %}
 {% endif %}
 {% if item.in_active_trail == TRUE %}
-  {% set item_modifiers = item_modifiers|merge(['active']) %}
+  {% set item_modifiers = item_modifiers|merge(['is-active']) %}
 {% endif %}
 {% if menu_level > 0 %}
   {% set item_modifiers = item_modifiers|merge(['sub', 'sub-' ~ menu_level]) %}

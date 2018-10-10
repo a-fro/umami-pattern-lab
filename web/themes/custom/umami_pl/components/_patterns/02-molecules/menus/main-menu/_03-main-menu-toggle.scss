@@ -1,5 +1,9 @@
 #block-umami-pl-main-menu--2 {
   @include breakout;
+
+  @include breakpoint($main-menu-medium) {
+    @include breakout($undo: true);
+  }
 }
 
 // Toggle

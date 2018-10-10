@@ -1,6 +1,12 @@
 @mixin grid {
+  @include rhythm(2);
+
   display: flex;
   flex-wrap: wrap;
+
+  @include large {
+    @include rhythm(3);
+  }
 }
 
 .grid {

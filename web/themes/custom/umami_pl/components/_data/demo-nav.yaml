@@ -4,3 +4,6 @@ demo:
       - title: "Home"
       - title: "Articles"
       - title: "Recipes"
+  account:
+    items:
+      - title: "Login"

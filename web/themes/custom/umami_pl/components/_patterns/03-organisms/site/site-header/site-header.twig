@@ -1,11 +1,20 @@
-<div class="pre-header region--pre-header">
-  {% block pre_header_content %}
-    {% include "@molecules/search/search.twig" %}
-  {% endblock %}
-</div>
-<div class="header region--header">
-  {% block header_content %}
-    {% include "@molecules/branding/branding.twig" %}
-    {% include "@molecules/menus/main-menu/main-menu.twig" %}
-  {% endblock %}
-</div>
+{% if preheader %}
+  <div class="pre-header region--pre-header">
+    {% block pre_header_content %}
+      {% include "@molecules/search/search.twig" %}
+      <div class="account-menu">
+        {% include "@molecules/menus/inline-menu/inline-menu.twig" with {
+          items: demo.account.items,
+        }%}
+      </div>
+    {% endblock %}
+  </div>
+{% endif %}
+{% if header %}
+  <div class="header region--header">
+    {% block header_content %}
+      {% include "@molecules/branding/branding.twig" %}
+      {% include "@molecules/menus/main-menu/main-menu.twig" %}
+    {% endblock %}
+  </div>
+{% endif %}

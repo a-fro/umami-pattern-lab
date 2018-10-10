@@ -1,5 +1,5 @@
 items:
-  - title: "Test"
+  - title: "My Account"
     url: "/"
-  - title: "Number 2"
+  - title: "Log out"
     url: "/test-2"

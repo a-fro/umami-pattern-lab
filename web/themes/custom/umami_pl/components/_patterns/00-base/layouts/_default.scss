@@ -19,63 +19,63 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$gutter}));
 // Remove this and uncomment Grid code below to use CSS Grid.
 //
 
-.main {
-  @include large {
-    display: flex;
-  }
-}
+// .main {
+//   @include large {
+//     display: flex;
+//   }
+// }
 
-.main-sidebar {
-  margin-bottom: $space-double;
+// .main-sidebar {
+//   margin-bottom: $space-double;
 
-  @include large {
-    order: 2;
-    width: $sidebar-width;
-    margin-bottom: 0;
-  }
-}
+//   @include large {
+//     order: 2;
+//     width: $sidebar-width;
+//     margin-bottom: 0;
+//   }
+// }
 
-.main-content {
-  width: 100%;
+// .main-content {
+//   width: 100%;
 
-  @include large {
-    &--with-sidebar {
-      margin-right: $gutter;
-      width: $main-width;
-    }
-  }
-}
+//   @include large {
+//     &--with-sidebar {
+//       margin-right: $gutter;
+//       width: $main-width;
+//     }
+//   }
+// }
 
-.layout--content-bottom {
-  background: $color-layout--content-bottom;
-}
+// .layout--content-bottom {
+//   background: $color-layout--content-bottom;
+// }
 
-.layout--footer {
-  background: $color-layout--footer;
-}
+// .layout--footer {
+//   background: $color-layout--footer;
+// }
 
 //
 // Layout Using CSS Grid (NO IE11 support)
 // Remove Flexbox code above and uncomment this section to use CSS Grid.
 //
 
-// .main {
-//   &--with-sidebar {
-//     @include large {
-//       display: grid;
-//       grid-gap: $gutter;
-//       grid-template-areas: "content sidebar";
-//       grid-template-columns: $main-width #{$sidebar-width};
-//     }
-//   }
-// }
-//
-// .main-sidebar {
-//   grid-area: sidebar;
-//   margin-bottom: $space-double;
-// }
-//
-// .main-content {
-//   grid-area: content;
-//   width: 100%;
-// }
+.main {
+  &--with-sidebar {
+    @include large {
+      display: grid;
+      grid-gap: $gutter;
+      grid-template-areas: "content sidebar";
+      grid-template-columns: $main-width #{$sidebar-width};
+    }
+  }
+}
+
+.main-sidebar {
+  grid-area: sidebar;
+  margin-bottom: $space-double;
+}
+
+.main-content {
+  grid-area: content;
+  width: 100%;
+}

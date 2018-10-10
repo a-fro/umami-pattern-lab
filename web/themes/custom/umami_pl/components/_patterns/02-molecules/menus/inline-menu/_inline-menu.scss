@@ -16,9 +16,10 @@
 }
 
 .inline-menu__link {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
   text-decoration: none;
-  text-transform: uppercase;
+  color: $color-nav--inline;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

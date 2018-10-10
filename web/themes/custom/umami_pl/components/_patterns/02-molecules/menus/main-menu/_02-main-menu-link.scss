@@ -1,6 +1,6 @@
 // A
 .main-menu__link {
-  color: $black;
+  color: $color-nav;
   font-family: $font-heading;
   display: block;
   font-size: 1.2rem;
@@ -24,6 +24,11 @@
       text-decoration: none;
       border-bottom-color: rgba(255, 97, 56, 0.3);
       color: #da3c13;
+    }
+
+    &--is-active {
+      text-decoration: none;
+      border-bottom-color: #da3c13;
     }
   }
 }
