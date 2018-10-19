@@ -1,0 +1,12 @@
+// @todo: refactor
+// Elements in this file are quick wins
+// for the presentation
+
+.field__label {
+  @include trailer(1);
+
+  font-weight: bold;
+  display: inline-block;
+  padding-right: 0.6rem;
+  clear: left;
+}

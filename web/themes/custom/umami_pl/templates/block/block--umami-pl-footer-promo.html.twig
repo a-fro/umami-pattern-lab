@@ -1,0 +1,11 @@
+{% set link = content.field_content_link|field_value[0] %}
+{% set img_uri = content.field_promo_image|field_target_entity.uri.value %}
+
+{% include "@molecules/promo/promo.twig" with {
+  "promo_img_src": file_url(img_uri),
+  "promo_image_output_image_tag": TRUE,
+  "promo_title": content.field_title|field_value,
+  "promo_summary": content.field_summary|field_value,
+  "promo_link_url": link['#url'],
+  "promo_link_text": link['#title']
+}%}

@@ -2,6 +2,7 @@
 // in components with other classnames.
 @mixin paragraph($margin: 0 0 1em) {
   margin: #{$margin};
+  max-width: $max-width-section;
 }
 
 @mixin body-copy {

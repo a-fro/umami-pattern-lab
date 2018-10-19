@@ -8,7 +8,7 @@ demo:
       'Umami Food Magazine'
 banner_img_src:
   "//umami-pl.test/sites/default/files/veggie-pasta-bake-hero-umami.jpg"
-banner_title: "Super easy vegetarian pasta bake"
+banner_title: "Suuuuper easy vegetarian pasta bake"
 banner_summary: "A wholesome pasta bake is the ultimate comfort food. This delicious bake is super quick to prepare and an ideal midweek meal for all the family."
 banner_link_url: "#"
 banner_link_text: 'Super easy vegetarian pasta bake'
@@ -31,3 +31,8 @@ collection_list_items:
   - {"name": "Mushrooms", "url": "#"}
   - {"name": "Party", "url": "#"}
   - {"name": "Pasta", "url": "#"}
+promo_title: "Umami Food Magazine"
+promo_img_src: "//umami-pl.test/sites/default/files/styles/medium_8_7/public/umami-bundle.png"
+promo_summary: "Skills and know-how. Magazine exclusive articles, recipes and plenty of reasons to get your copy today."
+promo_link_url: "#"
+promo_link_text: 'Find out more'

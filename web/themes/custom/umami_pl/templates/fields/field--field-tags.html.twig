@@ -1,0 +1,8 @@
+{# @todo: pass through PL #}
+<br>
+<div class="field__label">{{ label }}:</div>
+
+{% include "@atoms/03-lists/00-ul.twig" with {
+  "ul_items": items,
+  "ul_base_class": 'tags'
+}%}

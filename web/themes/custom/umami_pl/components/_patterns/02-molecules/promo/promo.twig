@@ -1,0 +1,22 @@
+<div class="promo">
+  <div class="promo__image">
+    {% if promo_img_src %}
+      {% include "@atoms/04-images/00-image/responsive-image.twig" with {
+        "img_src": promo_img_src,
+        "img_alt": promo_img_alt,
+        "output_image_tag": promo_image_output_image_tag,
+        "responsive_image_base_class": 'image',
+      } %}
+    {% endif %}
+  </div>
+  <div class="promo__content">
+    <h2 class="promo__title">{{ promo_title }}</h2>
+    <div class="promo__summary">
+      <p>{{ promo_summary }}</p>
+    </div>
+    <div class="promo__link">
+      <a href="{{ promo_link_url }}" class="">{{ promo_link_text }}</a>
+    </div>
+  </div>
+</div>
+</div>

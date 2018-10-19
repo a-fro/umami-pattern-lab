@@ -21,8 +21,12 @@
   }
 }
 
-.grid--3 {
+.grid--3 .grid {
   @include three-column-grid;
+}
+
+.grid--4 .grid {
+  @include four-column-grid;
 }
 
 .grid--one-x-two {

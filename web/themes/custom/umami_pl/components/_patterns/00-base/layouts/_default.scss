@@ -44,6 +44,11 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$gutter}));
 // Layout Using CSS Grid (NO IE11 support)
 // Remove Flexbox code above and uncomment this section to use CSS Grid.
 //
+.layout--tabs {
+  @include full-width;
+
+  background: $dark-sea-green;
+}
 
 .main {
   @include trailer(1);

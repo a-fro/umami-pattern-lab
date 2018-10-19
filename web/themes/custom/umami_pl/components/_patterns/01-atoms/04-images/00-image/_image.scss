@@ -16,3 +16,11 @@ figure {
 .figure__caption {
   font-style: italic;
 }
+
+article img {
+  max-width: $max-width-section;
+
+  .grid & {
+    width: 100%;
+  }
+}

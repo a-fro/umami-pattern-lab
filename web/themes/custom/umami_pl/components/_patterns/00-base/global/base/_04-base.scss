@@ -27,5 +27,10 @@ body {
   &--content-bottom,
   &--footer {
     @include full-width;
+    @include padding-leader(1);
   }
+}
+
+article {
+  background: $white;
 }

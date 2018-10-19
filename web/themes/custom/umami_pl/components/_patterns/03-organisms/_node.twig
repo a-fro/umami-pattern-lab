@@ -71,9 +71,15 @@
  */
 #}
 <article {{ bem("node") }}>
-
   {{ title_prefix }}
-  {% if not page %}
+  {% if page %}
+  <header class="node__header">
+    {% include "@atoms/02-text/00-headings/_heading.twig" with {
+      "heading_level": 1,
+      "heading": label,
+    } %}
+  </header>
+  {% else %}
     {% include "@atoms/02-text/00-headings/_heading.twig" with {
       "heading_level": 2,
       "heading": label,
@@ -82,6 +88,12 @@
         'rel': 'bookmark'
       },
     } %}
+  {% endif %}
+  {{ title_suffix }}
+
+  {{ title_prefix }}
+  {% if not page %}
+
   {% endif %}
   {{ title_suffix }}
 

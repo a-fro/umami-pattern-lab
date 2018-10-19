@@ -8,38 +8,39 @@ grid_modifiers:
   2:
     wrapped
 cards:
-  -
-    card_modifiers:
-      1: "grid-item"
-    card_img_src:
-      "../../images/mojito-mocktail.jpg"
-    card_title:
-      "Skip the spirits with delicious mocktails"
-    card_link_url:
-      "#"
-    card_link_text:
-      "View article"
-  -
-    card_modifiers:
-      1: "grid-item"
-      2: 'alt'
-    card_img_src:
-      "http://umami.test/sites/default/files/styles/square_large/public/chili-sauce-umami.jpg"
-    card_title:
-      "Fiery chili sauce"
-    card_link_url:
-      "#"
-    card_link_text:
-      "View recipe"
-  -
-    card_modifiers:
-      1: "grid-item"
-      2: 'alt'
-    card_img_src:
-      "http://umami.test/sites/default/files/styles/square_large/public/crema-catalana-umami.jpg"
-    card_title:
-      "Crema catalana"
-    card_link_url:
-      "#"
-    card_link_text:
-      "View recipe"
+  *promoted
+  # -
+  #   card_modifiers:
+  #     1: "grid-item"
+  #   card_img_src:
+  #     "../../images/mojito-mocktail.jpg"
+  #   card_title:
+  #     "Skip the spirits with delicious mocktails"
+  #   card_link_url:
+  #     "#"
+  #   card_link_text:
+  #     "View article"
+  # -
+  #   card_modifiers:
+  #     1: "grid-item"
+  #     2: 'alt'
+  #   card_img_src:
+  #     "http://umami.test/sites/default/files/styles/square_large/public/chili-sauce-umami.jpg"
+  #   card_title:
+  #     "Fiery chili sauce"
+  #   card_link_url:
+  #     "#"
+  #   card_link_text:
+  #     "View recipe"
+  # -
+  #   card_modifiers:
+  #     1: "grid-item"
+  #     2: 'alt'
+  #   card_img_src:
+  #     "http://umami.test/sites/default/files/styles/square_large/public/crema-catalana-umami.jpg"
+  #   card_title:
+  #     "Crema catalana"
+  #   card_link_url:
+  #     "#"
+  #   card_link_text:
+  #     "View recipe"
