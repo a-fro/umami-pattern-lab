@@ -1,0 +1,22 @@
+uuid: 6443fe00-3645-430c-a4f4-addf942e2c31
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - stark
+_core:
+  default_config_hash: mscXHSYJmHeDvH4yB8D1lARAHXe1A7ZsYohvnWwlrCw
+id: stark_search
+theme: stark
+region: sidebar_first
+weight: -7
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }
