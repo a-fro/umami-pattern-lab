@@ -38,3 +38,37 @@ ol {
     }
   }
 }
+
+.recipe-instructions {
+  ol {
+    padding: 0;
+    max-width: 796px;
+  }
+
+  li {
+    position: relative;
+    min-height: 1.5em;
+    padding: 0 0 0.6em 2.5em;
+    list-style: none;
+    counter-increment: step-counter;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: counter(step-counter);
+      color: #cc2a00;
+      font-size: 1.5rem;
+    }
+  }
+
+  .field__label {
+    @include heading-large;
+    @include leader(1);
+    @include trailer(1);
+
+    border-bottom: 1px solid #eec2cb;
+    display: block;
+  }
+}
+

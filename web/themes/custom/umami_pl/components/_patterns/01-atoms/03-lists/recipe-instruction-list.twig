@@ -1,0 +1,34 @@
+{#
+/**
+ * Available variables:
+ * - ol_base_class - the base classname
+ * - ol_modifiers - array of modifiers to add to the base classname
+ * - ol_blockname - blockname prepended to the base classname
+ *
+ * - listItems - TBD
+ */
+#}
+{% set ol_base_class = ol_base_class|default('list') %}
+{% set ol_blockname = ol_blockname|default('recipe-instructions') %}
+
+<div class="recipe-instructions">
+  <div class="field__label">{{ label }}</div>
+
+  {% if content %}
+    {{ content }}
+  {% else %}
+    <ol {{ bem(ol_base_class, (ol_modifiers), ol_blockname) }}>
+      {% for ol_item in ol_items %}
+        {% include "@atoms/03-lists/_list-item.twig" with {
+          "list_item_label": ol_item.label,
+          "list_item_content": ol_item.content,
+          "li_base_class": ol_item.li_base_class,
+          "li_base_class": ol_item.li_base_class,
+          "li_modifiers": ol_item.li_modifiers,
+          "li_blockname": ol_item.li_blockname,
+        } %}
+      {% endfor %}
+    </ol>
+  {% endif %}
+</div>
+

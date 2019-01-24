@@ -1,0 +1,5 @@
+{% include "@atoms/03-lists/recipe-instruction-list.twig" with {
+  content: items.0.content['#text']|t(),
+  "ol_base_class": 'recipe-instructions',
+  "label": "Recipe Instruction"
+}%}
