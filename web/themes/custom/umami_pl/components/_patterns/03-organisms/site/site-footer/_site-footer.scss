@@ -1,3 +1,40 @@
 .footer {
-  clear: both;
+  @include wrapper;
+
+  @include large {
+    display: flex;
+    justify-content: space-between;
+
+    .promo {
+      flex-basis: 60%;
+    }
+  }
+
+  h2 {
+    @include heading-large;
+
+    color: white;
+    margin-bottom: 0.5em;
+  }
+
+  nav {
+    @include padding-trailer(1);
+
+    text-align: center;
+  }
+
+  .menu {
+    padding: 0;
+
+    .menu__link {
+      color: white;
+    }
+  }
+}
+
+.layout--bottom {
+  padding: $space;
+
+  background: white;
+  text-align: center;
 }
