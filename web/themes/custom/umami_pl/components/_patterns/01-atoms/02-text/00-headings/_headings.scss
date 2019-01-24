@@ -102,7 +102,9 @@
 
   .is-front & {
     @include leader(1);
+  }
 
+  .one-column & {
     text-align: center;
   }
 }

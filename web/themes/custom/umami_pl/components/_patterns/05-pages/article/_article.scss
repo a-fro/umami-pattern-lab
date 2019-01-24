@@ -1,4 +1,6 @@
 article {
+  @include trailer(2);
+
   padding: 2.37rem;
 
   .grid & {
@@ -20,5 +22,9 @@ article {
 
   footer {
     display: none;
+  }
+
+  .layout--sidebar & {
+    @include trailer(1);
   }
 }
