@@ -3,9 +3,9 @@
   "description": "Project template for Drupal 8 themes",
   "version": "1.0.0",
   "devDependencies": {
-    "emulsify-gulp": "^2.0.0",
-    "gulp": "^3.9.1",
     "compass-mixins": "0.12.10",
+    "emulsify-gulp": "^2.6.0",
+    "gulp": "^3.9.1",
     "sass-tools": "^2.1.2"
   },
   "scripts": {
