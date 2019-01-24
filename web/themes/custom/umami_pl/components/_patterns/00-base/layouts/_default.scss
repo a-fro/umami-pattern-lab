@@ -2,6 +2,10 @@
 // General Layout
 //
 
+html {
+  box-sizing: border-box;
+}
+
 $sidebar-width: 33%;
 $gutter: $space;
 $main-width: calc(100% - (#{$sidebar-width} + #{$gutter}));
@@ -53,12 +57,13 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$gutter}));
 .main {
   @include trailer(1);
 
-  &--with-sidebar {
+  &--with-sidebar,
+  .two-columns & {
     @include large {
       display: grid;
-      grid-gap: $gutter;
+      grid-gap: 30px;
       grid-template-areas: "content sidebar";
-      grid-template-columns: $main-width #{$sidebar-width};
+      grid-template-columns: 2fr 1fr;
     }
   }
 }

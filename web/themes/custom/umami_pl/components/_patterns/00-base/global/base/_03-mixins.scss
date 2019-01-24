@@ -15,7 +15,7 @@
 
 /// Mixin - Wrapper
 /// Outer container mixin for large screens
-@mixin wrapper($container-max-width: $max-width, $outer-container-break: $small, $v-margin: 0, $v-padding: 0, $h-padding: $space, $h-padding-large: $h-padding) {
+@mixin wrapper($container-max-width: $max-width, $outer-container-break: $small, $v-margin: 0, $v-padding: 0, $h-padding: $space, $h-padding-large: $space) {
   max-width: #{$container-max-width};
   width: auto;
   margin: #{$v-margin} auto;
@@ -70,7 +70,7 @@
   @include center;
 }
 
-@mixin two-column-grid($gap: 28px, $responsive: true, $breakpoint: $large) {
+@mixin two-column-grid($gap: 28px, $responsive: true, $breakpoint: $medium) {
   display: grid;
   grid-gap: $gap;
 
@@ -158,11 +158,19 @@
 
   @if $responsive {
     @include small {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+
+      :first-child {
+        grid-column: 1 / -1;
+      }
     }
 
     @include large {
       grid-template-columns: 2fr 1fr 1fr;
+
+      :first-child {
+        grid-column: 1;
+      }
     }
   }
   @else {
