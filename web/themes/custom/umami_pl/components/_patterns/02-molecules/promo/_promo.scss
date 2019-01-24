@@ -1,13 +1,15 @@
 .promo {
-  @include wrapper;
+  @include trailer(1);
 
   color: $white;
   text-align: center;
+  overflow: hidden;
 
   @include large {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 4fr 6fr;
     text-align: left;
+    height: 200px;
 
     &__image {
       grid-column: 1;
@@ -29,7 +31,7 @@
   }
 
   &__title {
-    @include heading-medium;
+    @include heading-large;
   }
 
   &__link a {
