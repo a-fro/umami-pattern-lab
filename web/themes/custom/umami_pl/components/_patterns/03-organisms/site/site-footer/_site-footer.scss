@@ -11,7 +11,7 @@
   }
 
   h2 {
-    @include heading-large;
+    @include heading-medium;
 
     color: white;
     margin-bottom: 0.5em;
@@ -21,6 +21,10 @@
     @include padding-trailer(1);
 
     text-align: center;
+
+    @include large {
+      text-align: left;
+    }
   }
 
   .menu {
@@ -37,4 +41,8 @@
 
   background: white;
   text-align: center;
+
+  @include large {
+    text-align: left;
+  }
 }

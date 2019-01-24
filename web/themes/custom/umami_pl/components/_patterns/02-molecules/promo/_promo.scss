@@ -1,6 +1,4 @@
 .promo {
-  @include trailer(1);
-
   color: $white;
   text-align: center;
   overflow: hidden;
@@ -31,7 +29,7 @@
   }
 
   &__title {
-    @include heading-large;
+    @include heading-medium;
   }
 
   &__link a {

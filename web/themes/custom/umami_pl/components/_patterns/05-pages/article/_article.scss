@@ -22,6 +22,19 @@ article {
 
   footer {
     display: none;
+
+    .layout--content & {
+      display: block;
+    }
+
+    .by-author::after {
+      display: inline-block;
+      margin: 0 0.25ex;
+      content: "•";
+      vertical-align: middle;
+      color: #7cbe8c;
+      font-size: 2em;
+    }
   }
 
   .layout--sidebar & {

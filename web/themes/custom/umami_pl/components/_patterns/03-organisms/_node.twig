@@ -96,16 +96,14 @@
 
   {% endif %}
   {{ title_suffix }}
-
   {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+    <footer class="node__meta">
+      <div{{ attributes.addClass('node__submitted') }}>
+        {% trans %}<span class="by-author">by {{ author_name }}</span> {{ created_date }}{% endtrans %}
         {{ metadata }}
       </div>
     </footer>
-  {% endif %}
+    {% endif %}
 
   <div{{ content_attributes }}>
     {{ content }}

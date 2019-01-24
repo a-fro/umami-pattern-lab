@@ -70,4 +70,7 @@
  *   in different view modes.
  */
 #}
+
+{% set created_date = node.getCreatedTime|format_date('umami_dates') %}
+
 {% include "@organisms/_node.twig" %}
