@@ -1,0 +1,125 @@
+{% set header %}
+  {% include "@organisms/site/site-header/site-header.twig" with {
+    header: true,
+    preheader: true
+  }%}
+{% endset %}
+
+{% set content %}
+  {% include "@molecules/menus/breadcrumbs/breadcrumbs.twig" %}
+  <article role="article" about="/recipes/fiery-chili-sauce" class="node node--type-recipe node--promoted node--view-mode-full">
+
+
+      <header class="node__header">
+        <h1 class="page-title">
+          <span class="field field--name-title field--type-string field--label-hidden">Fiery chili sauce</span>
+
+        </h1>
+      </header>
+
+
+
+    <div class="node__content">
+
+              <div class="clearfix text-formatted field field--name-field-summary field--type-text-long field--label-hidden field__item"><p>A rich and fiery chili sauce. Take care when handling chili peppers. And serve sparingly!</p>
+  </div>
+
+    <div class="label-items field field--name-field-recipe-category field--type-entity-reference field--label-inline">
+      <div class="field__label">Recipe category</div>
+            <div class="field__items">
+                <div class="field__item"><a href="/recipe-category/accompaniment" hreflang="en">Accompaniment</a></div>
+                </div>
+        </div>
+
+    <div class="label-items field field--name-field-tags field--type-entity-reference field--label-inline">
+      <div class="field__label">Tags</div>
+            <div class="field__items">
+                <div class="field__item"><a href="/tags/vegetarian" hreflang="en">Vegetarian</a></div>
+                </div>
+        </div>
+
+              <div class="field field--name-field-image field--type-image field--label-hidden field__item">    <img srcset="/sites/default/files/styles/medium_3_2_600x400/public/chili-sauce-umami.jpg?itok=ak4JCUow 600w, /sites/default/files/styles/large_3_2_768x512/public/chili-sauce-umami.jpg?itok=CaWjwOR6 768w, /sites/default/files/styles/medium_3_2_2x/public/chili-sauce-umami.jpg?itok=y2e8dX5E 1200w, /sites/default/files/styles/large_3_2_2x/public/chili-sauce-umami.jpg?itok=L6qaIxqG 1536w" sizes="100vw" src="/sites/default/files/styles/large_3_2_768x512/public/chili-sauce-umami.jpg?itok=CaWjwOR6" alt="An iridescent array of chilies, onions, and garlic, slowly sweating over a low heat" typeof="foaf:Image">
+
+
+  </div>
+
+    <div class="field field--name-field-preparation-time field--type-integer field--label-inline">
+      <div class="field__label">Preparation time</div>
+                <div content="10" class="field__item">10 minutes</div>
+            </div>
+
+    <div class="field field--name-field-cooking-time field--type-integer field--label-inline">
+      <div class="field__label">Cooking time</div>
+                <div content="50" class="field__item">50 minutes</div>
+            </div>
+
+    <div class="field field--name-field-number-of-servings field--type-integer field--label-inline">
+      <div class="field__label">Number of servings</div>
+                <div class="field__item">60</div>
+            </div>
+
+    <div class="label-items field field--name-field-difficulty field--type-list-string field--label-inline">
+      <div class="field__label">Difficulty</div>
+                <div class="field__item">Easy</div>
+            </div>
+
+    <div class="field field--name-field-ingredients field--type-string field--label-above">
+      <div class="field__label">Ingredients</div>
+            <div class="field__items">
+                <div class="field__item">2 red onions</div>
+            <div class="field__item"> 1 lemon</div>
+            <div class="field__item"> 2 limes</div>
+            <div class="field__item"> 250ml malt vinegar</div>
+            <div class="field__item"> 7 garlic cloves</div>
+            <div class="field__item"> 1 green bell pepper</div>
+            <div class="field__item"> 1 red bell pepper</div>
+            <div class="field__item"> 800g cherry tomatoes</div>
+            <div class="field__item"> 30 mixed chilies</div>
+            <div class="field__item"> Olive oil</div>
+            <div class="field__item"> 1 tbsp ground black pepper</div>
+            <div class="field__item"> 1 tbsp brown sugar</div>
+                </div>
+        </div>
+
+    <div class="clearfix text-formatted field field--name-field-recipe-instruction field--type-text-long field--label-above">
+      <div class="field__label">Recipe instruction</div>
+                <div class="field__item"><ol><li>Preheat the oven to 400°F/200°C.</li>
+  <li>Finely chop the red onions and sweat gently on a low heat in olive oil for 5 minutes.</li>
+  <li>Peel the garlic and add it to the onions.</li>
+  <li>Meanwhile, chop the bell peppers to 1 inch pieces. Add the bell peppers and tomatoes to a roasting dish, and rub with lemon juice, olive oil and black pepper. Transfer to the oven and roast for 30 minutes.</li>
+  <li>Once the onions and garlic have softened, chop and add the chilies, seeds and all. Mix well and continue to gently fry.</li>
+  <li>Thoroughly wash your hands following handling raw chilies.</li>
+  <li>Once the tomatoes and bell peppers have finished roasting, add them to the pan. Cook for at least 10 minutes, breaking them up with a masher or a hand blender as they simmer. Once broken up, mix in the sugar.</li>
+  <li>Transfer the sauce to a blender and blend until smooth.</li>
+  <li>Return to the pan and add the vinegar and juice of the limes.</li>
+  <li>Cook through for a further 10 minutes, then leave to cool.</li>
+  <li>Transfer to sterilized jars and keep refrigerated.</li>
+  <li>Leave for at least two weeks before tasting.</li>
+  </ol></div>
+            </div>
+
+    </div>
+
+  </article>
+{% endset %}
+
+{% set content_bottom %}
+  {% include "@organisms/collection-list/collection-list.twig" %}
+{% endset %}
+
+{% set footer %}
+  {% include "@molecules/promo/promo.twig" %}
+{% endset %}
+
+{% set page = {
+  header: header,
+  banner_top: banner_top,
+  content: content,
+  content_bottom: content_bottom,
+  footer: footer
+}%}
+
+{% include "@pages/_page.twig" with {
+  page: page,
+  attributes: ['one-column']
+}%}

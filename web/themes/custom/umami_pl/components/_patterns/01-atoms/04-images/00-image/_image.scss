@@ -18,9 +18,21 @@ figure {
 }
 
 article img {
-  max-width: $max-width-section;
-
   .grid & {
     width: 100%;
+  }
+
+  .node-type__recipe & {
+    max-width: $max-width-section;
+    background-color: #fcece7;
+    background-image: url(../images/png/umami-background-pattern-1.png);
+  }
+
+  .two-columns & {
+    @include trailer(1);
+
+    @include xl {
+      @include trailer(2);
+    }
   }
 }
