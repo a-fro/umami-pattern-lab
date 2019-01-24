@@ -23,4 +23,6 @@
  * @see template_preprocess_html()
  */
 #}
+
+{% set attributes = attributes.addClass([path_info.node_type_class]) %}
 {% include "@pages/_html.twig" %}

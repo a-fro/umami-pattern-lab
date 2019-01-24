@@ -23,6 +23,11 @@ function umami_pl_preprocess_html(&$variables) {
   else {
     $variables['attributes']['class'][] = 'one-column';
   }
+  // Add the node bundle identifier
+  if (!empty($variables['node_type'])) {
+    $type = str_replace('_', '-', $variables['node_type']);
+    $variables['path_info']['node_type_class'] = "node-type__{$type}";
+  }
 }
 
 /**
