@@ -1,6 +1,12 @@
+{# @see core umami theme template for block--bundle--banner-block.html.twig #}
+{% set banner_img_src = content.field_banner_image.0['#item'].entity.uri.value %}
+
 {% set link = content.field_content_link|field_value[0] %}
+
 {% include "@molecules/recipe-banner/recipe-banner.twig" with {
   "banner_image_output_image_tag": TRUE,
+  "banner_img_src": banner_img_src|image_style('scale_crop_7_3_large'),
+  "banner_img_alt": content.field_banner_image.0['#item'].alt,
   "banner_title": content.field_title|field_value,
   "banner_summary": content.field_summary|field_value,
   "banner_link_url": link['#url'],
