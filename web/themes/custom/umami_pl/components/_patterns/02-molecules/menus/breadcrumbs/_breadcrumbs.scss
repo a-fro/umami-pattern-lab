@@ -1,7 +1,9 @@
-$breadcrumb-active: #bbb;
+$breadcrumb-active: #444;
 
 .breadcrumb {
   @include list-reset;
+
+  padding: 1rem 2.37rem 2rem;
 }
 
 .breadcrumb__item,
@@ -9,26 +11,28 @@ $breadcrumb-active: #bbb;
 .breadcrumb__link:link,
 .breadcrumb__link:visited,
 .breadcrumb__link:focus {
-  color: $gray-light;
-  text-decoration: none;
+  color: $color-link;
 }
 
 .breadcrumb__link:hover {
-  color: $gray;
+  color: $gray-dark;
 }
 
 .breadcrumb__item {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 1rem;
 
-  &::after {
-    content: "/";
+  &::before {
+    content: ' \BB ';
+    color: $breadcrumb-active;
   }
 
   &:last-child {
-    color: $breadcrumb-active;
+    color: $gray-dark;
+  }
 
-    &::after {
+  &:first-child {
+    &::before {
       content: "";
     }
   }
