@@ -13,6 +13,10 @@
     max-width: 205px;
     background-color: inherit;
 
+    &:hover {
+      background-color: transparent;
+    }
+
     svg {
       width: 100%;
       max-width: 205px;
