@@ -1,8 +1,10 @@
 {% set header %}
-  {% include "@organisms/site/site-header/site-header.twig" with {
-    header: true,
-    preheader: true
-  }%}
+  <div class="layout layout--header">
+    {% include "@organisms/site/site-header/site-header.twig" with {
+      header: true,
+      preheader: true
+    }%}
+  </div>
 {% endset %}
 
 {% set banner_top %}

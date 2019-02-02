@@ -4,7 +4,7 @@
   @include full-width;
 
   background: #fff;
-  padding: 0 $space;
+  padding: 0;
 }
 
 .region--pre-header {
@@ -14,7 +14,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 0;
   border-bottom: 1px solid #e6eee0;
 }
 
@@ -25,5 +25,5 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 0;
 }

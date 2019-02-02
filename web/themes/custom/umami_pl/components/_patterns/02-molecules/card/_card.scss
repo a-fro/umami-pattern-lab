@@ -1,7 +1,7 @@
 .card {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  width: 100%;
   padding: 1rem;
   border: 1px solid $color-card-border;
   background-color: $color-card-bg;
@@ -28,6 +28,8 @@
 .card__link {
   @include link;
   @include link--more;
+
+  align-self: baseline;
 }
 
 .card__button {
@@ -36,13 +38,25 @@
 
 // Variations
 .card--alt {
-  align-items: stretch;
+  justify-content: flex-start;
 
   img {
     margin-bottom: 1.2em;
   }
 
-  .card__copy {
+  .card__image {
+    order: 1;
+  }
+
+  .card__title {
+    order: 2;
+  }
+
+  .card__link {
+    order: 3;
+    margin-bottom: 0;
+  }
+}
 
 .articles .card {
   .card__image {

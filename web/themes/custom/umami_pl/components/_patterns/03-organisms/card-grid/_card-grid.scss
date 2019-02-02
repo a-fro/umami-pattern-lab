@@ -12,6 +12,9 @@
   }
 
   .pl & {
+    max-width: $max-width;
+    margin: 0 auto;
+
     .card {
       max-width: 100%;
     }
