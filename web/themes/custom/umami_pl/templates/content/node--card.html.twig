@@ -1,0 +1,13 @@
+{% set card_modifiers = modifiers|default["grid-item", 'card']%}
+
+{% set card_img_src = content.field_image.0['#item'].entity.uri.value %}
+
+{% include "@molecules/card/01-card.twig" with {
+  card_modifiers: ["grid-item", 'card']
+  card_title: label,
+  card_body: content.body,
+  card_link_url: url,
+  card_link_text: 'View ' ~ node.type.entity.label,
+  card_img_src: card_img_src|image_style('medium_3_2_600x400'),
+  card_image_output_image_tag: true
+} %}
