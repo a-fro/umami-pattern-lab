@@ -38,6 +38,7 @@
     margin: 0;
     padding: 0;
   }
+
   @else {
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
@@ -79,6 +80,7 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
+
   @else {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -104,6 +106,7 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
+
   @else {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -141,6 +144,7 @@
       grid-template-columns: repeat(4, 1fr);
     }
   }
+
   @else {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -173,6 +177,7 @@
       }
     }
   }
+
   @else {
     grid-template-columns: 2fr 1fr 1fr;
   }

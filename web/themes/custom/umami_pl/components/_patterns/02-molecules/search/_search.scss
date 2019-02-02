@@ -47,15 +47,18 @@
   align-items: center;
   width: 40px;
   height: 40px;
+
   /* Centres the icon when focused/hovered */
   margin-right: -7px;
   padding-right: 7px;
 }
+
 .search-link:focus,
 .search-link:hover {
   outline: 3px solid #00836d;
   background-color: #fff;
 }
+
 .search-link svg {
   display: block;
   width: 26px;
@@ -92,6 +95,7 @@
 .form-search::placeholder {
   opacity: 1;
 }
+
 .form-type-search .form-search {
   box-sizing: border-box; /* Override input[type="search"] of normalize.css */
 }
@@ -103,6 +107,7 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+
 .search-block-form .form-submit,
 .search-form .form-submit {
   /* Take off the border radius on the left side as it bumps into the search field */

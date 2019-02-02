@@ -1,7 +1,6 @@
 .card {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-flow: column wrap;
   padding: 1rem;
   border: 1px solid $color-card-border;
   background-color: $color-card-bg;
