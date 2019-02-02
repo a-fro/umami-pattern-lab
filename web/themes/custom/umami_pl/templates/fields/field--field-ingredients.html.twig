@@ -1,0 +1,8 @@
+{% set ingredients = [] %}
+{% for item in items %}
+  {% set ingredients = ingredients|merge([item.content|render]) %}
+{% endfor %}
+
+{% include "@molecules/ingredient-list/ingredient-list.twig" with {
+  "items": ingredients
+}%}

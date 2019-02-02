@@ -97,6 +97,15 @@
   }
 }
 
+@mixin heading-underlined {
+  @include leader(1);
+  @include trailer(1);
+  @include padding-trailer(0.5);
+
+  border-bottom: 1px solid #eec2cb;
+  display: block;
+}
+
 .h1 {
   @include heading-xl();
 

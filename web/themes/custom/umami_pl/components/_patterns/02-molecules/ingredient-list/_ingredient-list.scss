@@ -1,0 +1,25 @@
+.ingredient-list {
+  margin-top: 1.184rem;
+  margin-bottom: 1.184rem;
+  padding: 1.266rem;
+  background-color: $color-ingredient-list-bg;
+
+  .field__label {
+    @include heading-large;
+    @include heading-underlined;
+  }
+
+  .field__items {
+    @include medium {
+      column-count: 2;
+      column-gap: 2rem;
+    }
+  }
+
+  .field__item {
+    margin: 0 0 0.6em 0;
+    padding: 0 0 0.6em 0;
+    border-bottom: 1px solid #eec2cb;
+    break-inside: avoid-column;
+  }
+}
