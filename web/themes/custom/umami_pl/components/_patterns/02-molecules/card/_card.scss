@@ -43,9 +43,25 @@
   }
 
   .card__copy {
+
+.articles .card {
+  .card__image {
     order: 2;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+  }
+
+  .card__title {
+    order: 1;
+  }
+
+  .card__link {
+    order: 3;
+    margin: 1em 0 0;
+  }
+}
+
+.recipes .card {
+  .card__link {
+    order: 4;
+    margin: 1em 0 0;
   }
 }
