@@ -37,4 +37,9 @@
  */
 #}
 
+{% set field_id = label|clean_class %}
+{% set attributes = attributes.addClass(['field__'~field_id]) %}
+
+{% set title_attributes = title_attributes.addClass(['field__label', 'field__label--'~field_id]) %}
+
 {% include "@atoms/_field.twig" %}
